@@ -10,11 +10,6 @@ class QueryProcessorTest {
 	private final QueryProcessor queryProcessor = new QueryProcessor();
 
 	@Test
-	void testEmptyStringIfCannotProcessQuery() {
-		assertEquals("", queryProcessor.process("test"));
-	}
-
-	@Test
 	void testKnowsAboutShakespeare() {
 		String actual = queryProcessor.process("Shakespeare");
 		if (!actual.contains("playwright")) {
